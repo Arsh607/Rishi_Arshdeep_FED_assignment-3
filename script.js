@@ -52,3 +52,35 @@ function renderQuestion() {
   
     // Display the current question
     questionContainer.textContent = storyData[currentState].question;
+
+    // Add buttons for each choice
+  storyData[currentState].options.forEach(option => {
+    addAnswerButton(option.text, option.nextState, option.effect);
+  });
+}
+
+// Helper function to create and add answer buttons
+function addAnswerButton(text, nextState, effect) {
+  const button = document.createElement("button");
+  button.textContent = text;
+  button.onclick = function() {
+    handleChoice(nextState, effect);
+  };
+  document.getElementById("answers").appendChild(button);
+}
+
+// Handle choice, update state, and render next question
+function handleChoice(nextState, effect) {
+  console.log(effect);  // Log the effect of the choice (can be expanded with more effects like health changes)
+
+  currentState = nextState;  // Update the state
+  renderQuestion();  // Re-render the next question
+}
+
+// Initialize the game
+function startGame() {
+  renderQuestion();  // Display the first question
+}
+
+// Start the game on page load
+window.onload = startGame;

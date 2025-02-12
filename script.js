@@ -1,5 +1,5 @@
-function renderQuestion() {
-    // Get the current question and options based on the state
-    const currentQuestion = questions[currentState]; // Assuming questions is an array of questions
-    const questionBox = document.getElementById("question");
-    questionBox.innerText = currentQuestion.question;
+// Initialize game state
+let currentState = 0;  // Start at the beginning of the story
+let playerHealth = 100;  // Starting health
+let inventory = [];  // Player's inventory
+

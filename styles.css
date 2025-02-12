@@ -1,0 +1,114 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url('background-image.jpg');
+    background-size: cover;
+    background-position: center;
+  }
+  
+  #game-container {
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 15px;
+    padding: 20px 30px;
+    width: 80%;
+    max-width: 600px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  h1 {
+    font-size: 2.5em;
+    color: #2d2d2d;
+    margin-bottom: 20px;
+    font-weight: bold;
+  }
+  
+  #question {
+    font-size: 1.4em;
+    margin-bottom: 20px;
+    line-height: 1.6;
+    color: #333;
+    font-style: italic;
+  }
+  
+  #answers {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  #answers button {
+    background-color: #4CAF50;
+    color: white;
+    font-size: 1.1em;
+    border: none;
+    padding: 12px 25px;
+    margin: 10px 0;
+    width: 100%;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  #answers button:hover {
+    background-color: #45a049;
+  }
+
+  #answers {
+    display: block;
+    text-align: center;
+  }
+
+  #answers li {
+      margin-bottom: 10px;
+  }
+
+  #answers button {
+      display: inline-block;
+  }
+
+  
+  #next-btn {
+    background-color: #008CBA;
+    color: white;
+    font-size: 1.2em;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: block;
+    margin-top: 20px;
+    width: 100%;
+  }
+  
+  #next-btn:hover {
+    background-color: #007B9E;
+  }
+  
+  @media screen and (max-width: 600px) {
+    #game-container {
+      padding: 15px;
+      width: 90%;
+    }
+  
+    h1 {
+      font-size: 2em;
+    }
+  
+    #question {
+      font-size: 1.2em;
+    }
+  
+    #answers button, #next-btn {
+      font-size: 1em;
+      padding: 10px;
+    }
+  }
+  

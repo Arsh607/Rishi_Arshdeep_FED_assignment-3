@@ -1,24 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Adventure Game</title>
-        <link rel="stylesheet" href="styles.css" />
-    </head>
-    <body>
-        <div id="game-container">
-            <h1>Your Adventure Game</h1>
-            <div id="question-container">
-                <p id="question">Your adventure begins now...</p>
-            </div>
-            <div id="health-container">
-                <p id="health">Health: 100</p>
-            </div>
-            <ul id="answers">
-                <!-- Answer buttons will be injected here by JavaScript -->
-            </ul>
-        </div>
-        <script src="script.js"></script>
-    </body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Adventure Game</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div id="game-container">
+      <header>
+        <h1>Your Adventure Game</h1>
+      </header>
+
+      <section id="game-content">
+        <p id="question" role="heading" aria-live="polite">Your adventure begins now...</p>
+
+        <!-- Displaying current health using ARIA live region -->
+        <p id="health" aria-live="assertive">Health: 100</p>
+
+        <ul id="answers" role="list" aria-labelledby="question">
+          <!-- Answer buttons will be injected here by JavaScript -->
+        </ul>
+      </section>
+    </div>
+    <script src="script.js"></script>
+  </body>
 </html>

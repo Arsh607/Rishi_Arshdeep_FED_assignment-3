@@ -42,3 +42,13 @@ const storyData = [
     }
   ];
 
+// Render function to update the game UI
+function renderQuestion() {
+    const questionContainer = document.getElementById("question");
+    const answersContainer = document.getElementById("answers");
+  
+    // Clear previous answers
+    answersContainer.innerHTML = "";
+  
+    // Display the current question
+    questionContainer.textContent = storyData[currentState].question;
